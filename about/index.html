@@ -1,0 +1,59 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>About · Linear Algebra for Physicists</title><meta name="description" content="About this course companion."><link rel="icon" href="/linalg/favicon.svg"><script>
+      // Applied before first paint, so the page never flashes the wrong theme.
+      (function () {
+        try {
+          var t = localStorage.getItem("linalg-theme");
+          if (t) document.documentElement.setAttribute("data-theme", t);
+        } catch (e) {}
+      })();
+    </script><link rel="stylesheet" href="/linalg/_astro/about.DSZls9bb.css"></head> <body> <header class="site-header"> <div class="wrap bar"> <a class="brand" href="/linalg/">Linear Algebra <span>· for Physicists</span></a> <nav class="site-nav"> <a href="/linalg/"> Lectures </a><a href="/linalg/problems"> Problems </a><a href="/linalg/ai"> Study with AI </a><a href="/linalg/about" aria-current="page"> About </a><a href="/linalg/search"> Search </a> <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch between light and dark theme"> <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"> <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path> </svg> </button> </nav> </div> </header> <main class="wrap" data-pagefind-body>  <header class="page-head"> <h1>About this site</h1> <p class="lede">
+The companion to Linear Algebra for Physicists — from vector spaces to hilbert spaces.
+</p> </header> <div class="prose"> <h2>What is here</h2> <p> 16 lectures with 55 definitions, 120 named
+      results, 104 proofs, 332 worked examples and 30 figures,
+      plus 427 problems — 297 of them with a final answer you can check
+      against your own. Everything is generated from the same LaTeX source as the
+      printed notes, so the site and the PDFs cannot drift apart.
+</p> <h2>Hints, answers, solutions</h2> <p>
+The course's LaTeX already draws the line this site follows. A <em>hint</em> is
+      a nudge, an <em>answer</em> is the terminal result with no reasoning, and a
+<em>solution</em> is the full worked method. The style package's own student
+      edition shows the first two and not the third; so does this site. Worked
+      solutions are done in the tutorial, which is where the learning in them
+      actually happens, and they are stripped from the source before the site is
+      built rather than merely hidden from it.
+</p> <p>
+So: get stuck properly first, take a hint if you need one, and look at the
+      answer only once you have one of your own to compare it with. An answer that
+      agrees with yours tells you something. An answer you read first tells you
+      nothing at all.
+</p> <h2>Your progress</h2> <p>
+Ticked objectives are stored in your own browser and nowhere else. There is no
+      account, no login, and nothing is sent anywhere — which also means your
+      progress does not follow you to another device, and clearing your browser data
+      clears it.
+</p> <h2>Found a mistake?</h2> <p>
+Please report it. Corrections during a course's first run are genuinely
+      valuable — bring it to a lecture or tutorial and it will be fixed at source
+      and republished.
+</p> <h2>Colophon</h2> <p>
+Built as a static site from LaTeX. Pandoc preserves the notes' own definition,
+      theorem, example and remark structure; KaTeX renders the mathematics at build
+      time, using the course's own notation macros translated automatically from the
+      same style file the PDFs load; and every figure is the same TikZ drawing as in
+      the PDF, compiled to SVG rather than screenshotted. No tracking, no cookies,
+      no third-party requests.
+</p> <p><a href="/linalg/">← Back to the lectures</a></p> </div>  </main> <footer class="site-footer"> <div class="wrap"> <p> Linear Algebra for Physicists — From Vector Spaces to Hilbert Spaces.
+
+Worked solutions are done in the tutorials and are not published here.
+</p> </div> </footer> <script>
+      document.querySelector("[data-theme-toggle]")?.addEventListener("click", function () {
+        var root = document.documentElement;
+        var current = root.getAttribute("data-theme");
+        if (!current) {
+          current = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        }
+        var next = current === "dark" ? "light" : "dark";
+        root.setAttribute("data-theme", next);
+        try { localStorage.setItem("linalg-theme", next); } catch (e) {}
+      });
+    </script> </body> </html>

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Linear algebra">
+  <rect width="32" height="32" rx="7" fill="#78003f"/>
+  <!-- Two basis vectors from a shared origin: the first object the course defines. -->
+  <g stroke="#fbf4f7" stroke-width="2.4" stroke-linecap="round" fill="none">
+    <path d="M8 24 L23 24"/>
+    <path d="M8 24 L15.5 9"/>
+  </g>
+  <circle cx="8" cy="24" r="2.4" fill="#fbf4f7"/>
+</svg>

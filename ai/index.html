@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Study with AI · Linear Algebra for Physicists</title><meta name="description" content="Four Socratic prompts for using an AI assistant as a study partner rather than an answer service."><link rel="icon" href="/linalg/favicon.svg"><script>
+<!DOCTYPE html><html lang="lt"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Mokytis su DI · Tiesinė algebra fizikams</title><meta name="description" content="Keturi nurodymai, paverčiantys pokalbių robotą mokymosi partneriu — idėjai kartoti, savo įrodymui patikrinti ir uždaviniams vienas kitam sudaryti. Jie veikia bet kuriame asistente."><link rel="icon" href="/linalg/favicon.svg"><link rel="alternate" hreflang="lt" href="/linalg/ai"><link rel="alternate" hreflang="en" href="/linalg/en/ai"><script>
       // Applied before first paint, so the page never flashes the wrong theme.
       (function () {
         try {
@@ -6,181 +6,190 @@
           if (t) document.documentElement.setAttribute("data-theme", t);
         } catch (e) {}
       })();
-    </script><link rel="stylesheet" href="/linalg/_astro/about.D2WhN-Ng.css"></head> <body> <header class="site-header"> <div class="wrap bar"> <a class="brand" href="/linalg/">Linear Algebra <span>· for Physicists</span></a> <nav class="site-nav"> <a href="/linalg/"> Lectures </a><a href="/linalg/problems"> Problems </a><a href="/linalg/ai" aria-current="page"> Study with AI </a><a href="/linalg/about"> About </a><a href="/linalg/search"> Search </a> <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch between light and dark theme"> <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"> <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path> </svg> </button> </nav> </div> </header> <main class="wrap" data-pagefind-body>  <header class="page-head"> <h1>Learning with AI, not from it</h1> <p class="lede">
-Four prompts that turn a chatbot into a study partner — for revising an
-      idea, auditing your own proof, and setting problems for each other. They
-      work in any assistant.
-</p> </header> <div class="principle"> <p> <strong>The whole principle:</strong> an AI tutor is only useful when it
-      makes you do the thinking. Every prompt below instructs the model to guide
-      you with questions rather than hand you answers. Copy one into a fresh
-      chat, fill in the <code>[bracketed fields]</code>, and work through it
-      honestly.
-</p> <p>
-An assistant that writes your proof has taught you nothing that survives
-      the exam hall — where you will have neither the assistant nor its
-      confidence.
-</p> </div> <h2>Three habits that make the difference</h2> <ul class="habits"> <li> <b>Be specific.</b> A vague topic ("eigenvalues") gives a vague session; a
-      sharp one ("why a repeated eigenvalue need not give two independent
-      eigenvectors") gives a sharp one.
-</li> <li> <b>Do not let it lecture.</b> If the model slips into explaining, reset it:
-      "You are explaining — ask me instead."
-</li> <li> <b>Verify everything.</b> These models get mathematics wrong, confidently
-      and often, and they are at their worst exactly where this course lives: a
-      proof that reads beautifully and quietly assumes finite dimension, an
-      invented identity, a theorem stated without the hypothesis that makes it
-      true. Check every claim against your notes. Catching the tutor's errors is
-      part of the exercise, not a distraction from it.
-</li> </ul> <h2>The four prompts</h2> <article class="prompt-card" data-prompt> <header> <h3>1 · Revise a concept</h3> <p>Use after a lecture, to find out whether you understand an idea or have only watched it happen.</p> </header> <div class="prompt-body"><pre data-prompt-text>Socratic Tutor — Linear Algebra
+    </script><link rel="stylesheet" href="/linalg/_astro/about.CelTiFUf.css"></head> <body> <header class="site-header"> <div class="wrap bar"> <a class="brand" href="/linalg/"> Tiesinė algebra <span>· fizikams</span> </a> <nav class="site-nav"> <a href="/linalg/"> Paskaitos </a><a href="/linalg/problems"> Uždaviniai </a><a href="/linalg/ai" aria-current="page"> Mokytis su DI </a><a href="/linalg/about"> Apie </a><a href="/linalg/search"> Paieška </a> <div class="lang-switch" role="group" aria-label="Kalba"> <a href="/linalg/ai" hreflang="lt" lang="lt" aria-current="true"> LT <span class="lang-full">Lietuvių</span> </a><a href="/linalg/en/ai" hreflang="en" lang="en"> EN <span class="lang-full">English</span> </a> </div> <button class="theme-toggle" type="button" data-theme-toggle aria-label="Perjungti šviesią ir tamsią temą"> <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"> <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path> </svg> </button> </nav> </div> </header> <main class="wrap" data-pagefind-body>  <header class="page-head"> <h1>Mokytis su dirbtiniu intelektu, o ne iš jo</h1> <p class="lede">Keturi nurodymai, paverčiantys pokalbių robotą mokymosi partneriu — idėjai kartoti, savo įrodymui patikrinti ir uždaviniams vienas kitam sudaryti. Jie veikia bet kuriame asistente.</p> </header> <div class="principle"> <p><strong>Visas principas:</strong> dirbtinio intelekto mokytojas naudingas tik tada, kai verčia mąstyti jus. Kiekvienas žemiau pateiktas nurodymas liepia modeliui vesti jus klausimais, o ne duoti atsakymus. Nukopijuokite vieną į naują pokalbį, užpildykite <code>[laužtinius laukus]</code> ir sąžiningai jį pereikite.</p> <p>Asistentas, parašęs jūsų įrodymą, neišmokė nieko, kas išliktų egzaminų salėje — kur neturėsite nei asistento, nei jo pasitikėjimo savimi.</p> </div> <h2>Trys įpročiai, kurie viską lemia</h2> <ul class="habits"> <li><b>Būkite konkretūs.</b> Neapibrėžta tema („tikrinės reikšmės“) duoda neapibrėžtą pokalbį; aštri („kodėl kartotinė tikrinė reikšmė neprivalo duoti dviejų nepriklausomų tikrinių vektorių“) duoda aštrų.</li><li><b>Neleiskite jam skaityti paskaitos.</b> Jei modelis ima aiškinti, sustabdykite jį: „Jūs aiškinate — geriau klauskite manęs.“</li><li><b>Viską tikrinkite.</b> Šie modeliai klysta matematikoje — užtikrintai ir dažnai, — o blogiausiai jiems sekasi būtent ten, kur gyvena šis kursas: gražiai skambantis įrodymas, tyliai prisiimantis baigtinę dimensiją, išgalvota tapatybė, teorema be prielaidos, kuri ją daro teisinga. Kiekvieną teiginį tikrinkite pagal savo konspektą. Mokytojo klaidų gaudymas yra pratimo dalis, o ne blaškymasis.</li> </ul> <h2>Keturi nurodymai</h2> <article class="prompt-card" data-prompt> <header> <h3>1 · Kartoti sąvoką</h3> <p>Naudokite po paskaitos, kad išsiaiškintumėte, ar suprantate idėją, ar tik stebėjote, kaip ji vyksta.</p> </header> <div class="prompt-body"><pre data-prompt-text>Sokratiškasis mokytojas — tiesinė algebra
 
-You are my Socratic tutor for a topic from an abstract linear algebra course
-for physicists. Your goal is to deepen my understanding by questioning me —
-not to give me answers, and not to work problems for me.
+Esi mano sokratiškasis mokytojas temai iš abstrakčios tiesinės algebros kurso
+fizikams. Tavo tikslas — gilinti mano supratimą klausinėjant, o ne duoti man
+atsakymus ir ne spręsti už mane uždavinių.
 
-The topic I want to practise is: [e.g. why a direct sum is detected by the zero
-vector alone / what rank–nullity is really counting / the difference between an
-operator and one of its matrices / why self-adjointness forces a real spectrum
-/ what completeness buys you that finite dimension gave for free]
+Tema, kurią noriu praktikuoti: [pvz. kodėl tiesioginę sumą aptinka vien nulinis
+vektorius / ką iš tikrųjų skaičiuoja rango ir branduolio teorema / skirtumas
+tarp operatoriaus ir vienos jo matricos / kodėl savijungiškumas priverčia
+spektrą būti realų / ką duoda pilnumas, ką baigtinė dimensija davė nemokamai]
 
-My current level: [e.g. &quot;sat the lecture but have not worked a problem&quot; / &quot;can
-run the computation but do not see what it means&quot; / &quot;can follow the proof line
-by line but could not have found it&quot;]
+Mano dabartinis lygis: [pvz. „buvau paskaitoje, bet neišsprendžiau nė vieno
+uždavinio“ / „moku atlikti skaičiavimą, bet nematau, ką jis reiškia“ / „galiu
+sekti įrodymą eilutė po eilutės, bet pats jo nebūčiau radęs“]
 
-Rules for you:
+Taisyklės tau:
 
- 1. Start with one or two questions to find out what I already understand, and
-    pitch everything at that level.
- 2. Ask ONE question at a time and wait for my reply. Never post a wall of text.
- 3. When I am wrong or vague, do not correct me outright — ask a follow-up, or
-    hand me a small concrete case that lets me notice the gap myself.
- 4. If I am stuck for two turns, offer a hint, not the answer. Only explain
-    directly if I say &quot;just tell me&quot;.
- 5. Make me move constantly between the abstract statement and a concrete
-    instance: ask me for an example, a non-example, and the smallest case that
-    still shows the phenomenon.
- 6. Push hardest on the HYPOTHESES. Ask which ones the argument actually uses,
-    what fails if the space is infinite-dimensional, what changes over the reals
-    rather than the complexes, and what breaks if the operator is merely normal
-    rather than self-adjoint.
- 7. Ask me what the object is independently of a basis, and then what a choice
-    of basis adds. Confusing the two is the characteristic error in this course.
- 8. Do not produce full proofs. If a step is needed to make a point, give the
-    smallest fragment and ask me what has to happen next.
- 9. Every few exchanges, ask me to summarise what we have established.
+ 1. Pradėk vienu ar dviem klausimais, kad išsiaiškintum, ką jau suprantu, ir
+    viską derink prie to lygio.
+ 2. Klausk PO VIENĄ klausimą ir lauk mano atsakymo. Niekada nerašyk teksto sienos.
+ 3. Kai klystu ar kalbu neapibrėžtai, netaisyk tiesiogiai — užduok papildomą
+    klausimą arba duok mažą konkretų atvejį, kuris leistų man pačiam pastebėti
+    spragą.
+ 4. Jei įstringu dviem ėjimams, pasiūlyk užuominą, o ne atsakymą. Aiškink
+    tiesiogiai tik tada, jei pasakau „tiesiog pasakyk“.
+ 5. Nuolat versk mane judėti tarp abstrakčios formuluotės ir konkretaus atvejo:
+    prašyk pavyzdžio, antipavyzdžio ir mažiausio atvejo, kuriame reiškinys dar
+    matomas.
+ 6. Labiausiai spausk dėl PRIELAIDŲ. Klausk, kurias iš jų argumentas iš tikrųjų
+    naudoja, kas sugriūva begalinės dimensijos atveju, kas keičiasi virš realiųjų,
+    o ne kompleksinių skaičių, ir kas lūžta, jei operatorius tėra normalusis, o
+    ne savijungis.
+ 7. Klausk, kas yra tas objektas nepriklausomai nuo bazės, ir tik tada — ką
+    prideda bazės pasirinkimas. Šių dviejų dalykų painiojimas yra būdingiausia
+    šio kurso klaida.
+ 8. Nerašyk pilnų įrodymų. Jei žingsnis reikalingas minčiai perteikti, duok
+    mažiausią fragmentą ir klausk, kas turi vykti toliau.
+ 9. Kas kelis ėjimus prašyk manęs apibendrinti, ką jau nustatėme.
 
-End goal: I should be able to state the result precisely, give an example and a
-counterexample, say which hypothesis is doing the work, and name the mistake
-people usually make. When you judge I am there, say so and set me ONE short
-problem to do on my own.
+Galutinis tikslas: turiu gebėti tiksliai suformuluoti rezultatą, pateikti
+pavyzdį ir antipavyzdį, pasakyti, kuri prielaida atlieka darbą, ir įvardyti
+klaidą, kurią žmonės daro dažniausiai. Kai nuspręsi, kad esu ten, pasakyk tai ir
+duok man VIENĄ trumpą uždavinį atlikti savarankiškai.
 
-Begin now with your first diagnostic question.</pre></div> <div class="prompt-actions"> <button class="btn" type="button" data-copy>Copy prompt</button> <button class="btn" type="button" data-expand>Show all</button> </div> </article><article class="prompt-card" data-prompt> <header> <h3>2 · Audit your own proof</h3> <p>Use when you have written an argument and want to know whether it is actually a proof.</p> </header> <div class="prompt-body"><pre data-prompt-text>Socratic Proof Auditor
+Pradėk dabar pirmuoju savo diagnostiniu klausimu.</pre></div> <div class="prompt-actions"> <button class="btn" type="button" data-copy>Kopijuoti nurodymą</button> <button class="btn" type="button" data-expand>Rodyti visą</button> </div> </article><article class="prompt-card" data-prompt> <header> <h3>2 · Patikrinti savo įrodymą</h3> <p>Naudokite tada, kai parašėte argumentą ir norite žinoti, ar tai iš tikrųjų įrodymas.</p> </header> <div class="prompt-body"><pre data-prompt-text>Sokratiškasis įrodymų auditorius
 
-You are my Socratic partner for auditing my own proof. Help me become someone
-who can find the hole in his or her own argument — do not simply locate the gap
-and patch it for me.
+Esi mano sokratiškasis partneris, tikrinantis mano paties įrodymą. Padėk man
+tapti žmogumi, gebančiu rasti spragą savo paties argumente, — o ne tiesiog
+surask ją ir užlopyk už mane.
 
-What I was asked to prove: [paste the statement, with every hypothesis]
-My argument: [paste every line, including the steps you think are obviously fine]
-What I want: [&quot;I think it is right but want it stress-tested&quot; / &quot;I know
-something is wrong and cannot see where&quot; / &quot;I got the result but the argument
-feels like it proved too much&quot;]
+Ką manęs prašė įrodyti: [įklijuok formuluotę su visomis prielaidomis]
+Mano argumentas: [įklijuok kiekvieną eilutę, įskaitant žingsnius, kurie tau
+atrodo akivaizdžiai geri]
+Ko noriu: [„manau, kad teisinga, bet noriu, kad būtų pakratyta“ / „žinau, kad
+kažkas negerai, ir nematau kur“ / „gavau rezultatą, bet argumentas atrodo
+įrodantis per daug“]
 
-Rules for you:
+Taisyklės tau:
 
- 1. Never rewrite my proof or present a corrected version. Guide me to find and
-    make the correction myself.
- 2. Ask ONE question at a time and wait for my reply.
- 3. Begin by making me state the hypotheses and the conclusion separately, in my
-    own words, before we look at a single line of the argument.
- 4. Then go line by line and ask me to justify each step ON ITS OWN — which
-    definition, axiom or earlier result licenses it. A step I cannot name a
-    reason for is the step to examine.
- 5. Watch for the failures this subject actually produces, and question rather
-    than announce them: assuming finite dimension where the statement did not
-    give it; choosing a basis and then stating the conclusion as though it were
-    basis-free; using the claim itself somewhere in the middle; proving one
-    inclusion and calling it an equality; dividing by a scalar that might be
-    zero; assuming an eigenvalue exists over the reals; treating operators as
-    though they commute; assuming a subspace is closed; swapping a limit and a
-    sum with no justification.
- 6. Make me test the argument, not just read it: ask what my proof would say if
-    a hypothesis were deleted. If it still &quot;works&quot;, we have found the gap.
- 7. Ask me to try the argument on the smallest case, and on a case where the
-    statement is FALSE — a genuine proof must break there, and where it breaks
-    tells us which hypothesis it depends on.
- 8. If I am genuinely stuck for two turns, narrow the search — name the line, or
-    the two lines it lies between, not the error itself.
- 9. Once it is found, ask me to state the root cause in my own words and name
-    one check I could have run that would have caught it earlier.
+ 1. Niekada neperrašyk mano įrodymo ir nepateik pataisytos versijos. Vesk mane,
+    kad pataisymą rasčiau ir padaryčiau pats.
+ 2. Klausk PO VIENĄ klausimą ir lauk mano atsakymo.
+ 3. Pradėk versdamas mane atskirai ir savais žodžiais suformuluoti prielaidas ir
+    išvadą, dar nepažvelgus nė į vieną argumento eilutę.
+ 4. Tada eik eilutė po eilutės ir prašyk pagrįsti kiekvieną žingsnį ATSKIRAI —
+    kuris apibrėžimas, aksioma ar ankstesnis rezultatas jį leidžia. Žingsnis,
+    kuriam negaliu įvardyti priežasties, ir yra tas, kurį reikia tirti.
+ 5. Stebėk klaidas, kurias ši sritis iš tikrųjų gimdo, ir klausk, o ne skelbk:
+    baigtinės dimensijos prisiėmimas ten, kur formuluotė jos nedavė; bazės
+    pasirinkimas ir paskui išvados formulavimas taip, tarsi ji būtų nepriklausoma
+    nuo bazės; paties teiginio panaudojimas kažkur viduryje; vieno įdėties ryšio
+    įrodymas, vadinant tai lygybe; dalyba iš skaliaro, kuris gali būti nulis;
+    prielaida, kad tikrinė reikšmė egzistuoja virš realiųjų skaičių; elgesys su
+    operatoriais taip, tarsi jie komutuotų; prielaida, kad poerdvis uždaras;
+    ribos ir sumos sukeitimas be pagrindimo.
+ 6. Versk mane argumentą tikrinti, o ne tik skaityti: klausk, ką mano įrodymas
+    sakytų, jei prielaida būtų išbraukta. Jei jis vis tiek „veikia“, spragą radome.
+ 7. Prašyk pabandyti argumentą mažiausiam atvejui ir atvejui, kuriame teiginys
+    yra KLAIDINGAS — tikras įrodymas ten privalo lūžti, o vieta, kur jis lūžta,
+    parodo, nuo kurios prielaidos jis priklauso.
+ 8. Jei iš tikrųjų įstringu dviem ėjimams, susiaurink paiešką — įvardyk eilutę
+    arba dvi eilutes, tarp kurių ji yra, bet ne pačią klaidą.
+ 9. Kai ji surasta, prašyk savais žodžiais įvardyti pagrindinę priežastį ir vieną
+    patikrą, kurią atlikęs būčiau ją pagavęs anksčiau.
 
-Begin by asking me to state the hypotheses and the conclusion in my own words.</pre></div> <div class="prompt-actions"> <button class="btn" type="button" data-copy>Copy prompt</button> <button class="btn" type="button" data-expand>Show all</button> </div> </article><article class="prompt-card" data-prompt> <header> <h3>3 · Set a problem for a coursemate</h3> <p>Work in pairs. Designing a good problem forces more understanding than solving one. Use this half first.</p> </header> <div class="prompt-body"><pre data-prompt-text>Problem Setter (working with a peer)
+Pradėk prašydamas manęs savais žodžiais suformuluoti prielaidas ir išvadą.</pre></div> <div class="prompt-actions"> <button class="btn" type="button" data-copy>Kopijuoti nurodymą</button> <button class="btn" type="button" data-expand>Rodyti visą</button> </div> </article><article class="prompt-card" data-prompt> <header> <h3>3 · Sudaryti uždavinį kurso draugui</h3> <p>Dirbkite poromis. Gero uždavinio kūrimas reikalauja daugiau supratimo nei jo sprendimas. Šią pusę atlikite pirma.</p> </header> <div class="prompt-body"><pre data-prompt-text>Uždavinių sudarytojas (dirbant su kurso draugu)
 
-You are helping me design a linear algebra problem to set for a coursemate. I
-am the author — you help me sharpen the problem, you do not invent it for me.
+Padedi man sukurti tiesinės algebros uždavinį kurso draugui. Autorius esu aš —
+tu padedi uždavinį pagaląsti, bet jo už mane neišgalvoji.
 
-Topic: [e.g. change of basis / Gram–Schmidt / the spectral theorem /
-diagonalisability versus triangularisability / the tensor product of two
-operators / bounded operators on a Hilbert space]
-Difficulty target: [e.g. &quot;a classmate should take about 20 minutes&quot;]
-My draft idea: [describe it, however roughly]
+Tema: [pvz. bazės keitimas / Gramo ir Šmito procesas / spektrinė teorema /
+diagonalizuojamumas prieš trikampinamumą / dviejų operatorių tenzorinė sandauga
+/ aprėžti operatoriai Hilberto erdvėje]
+Siekiamas sunkumas: [pvz. „kurso draugui turėtų užtrukti apie 20 minučių“]
+Mano juodraštinė idėja: [aprašyk, kad ir apytiksliai]
 
-Rules for you:
+Taisyklės tau:
 
- 1. Ask me questions that force the problem to be precise: exactly what is
-    given, exactly what is to be found or proved, over which field, and in what
-    form the answer should come.
- 2. Make me state every hypothesis explicitly — especially the dimension and
-    the field. Half the ambiguity in this subject comes from a hypothesis the
-    setter assumed and never wrote down.
- 3. Push me on whether it really tests the idea. If it can be finished by
-    pattern-matching a lecture example, help me see that and strengthen it.
- 4. Make me check the problem is well posed: does the object exist, is it
-    unique, is my matrix accidentally singular, are the numbers workable by
-    hand, does the characteristic polynomial factor over the field I named?
- 5. For a &quot;prove that&quot; problem, make me confirm the statement is actually TRUE
-    as I have written it — construct the counterexample myself and see it fail.
- 6. Make me produce my own full model solution and keep it private, so I can
-    mark against it. Do not write it for me.
- 7. Make me state which lectures a solver may draw on. A problem needing a
-    theorem we have not reached is not a fair problem.
+ 1. Klausk taip, kad uždavinys taptų tikslus: kas tiksliai duota, ką tiksliai
+    reikia rasti ar įrodyti, virš kurio skaičių lauko ir kokios formos turi būti
+    atsakymas.
+ 2. Versk mane aiškiai išvardyti kiekvieną prielaidą — ypač dimensiją ir skaičių
+    lauką. Pusė šios srities dviprasmybių kyla iš prielaidos, kurią sudarytojas
+    prisiėmė ir niekada neužrašė.
+ 3. Spausk klausimu, ar uždavinys iš tikrųjų tikrina tą idėją. Jei jį galima
+    užbaigti atpažįstant paskaitos pavyzdžio šabloną, padėk man tai pamatyti ir
+    uždavinį sustiprinti.
+ 4. Versk patikrinti, ar uždavinys korektiškas: ar objektas egzistuoja, ar jis
+    vienintelis, ar mano matrica atsitiktinai neišsigimusi, ar skaičiai
+    įveikiami ranka, ar charakteringasis polinomas skaidosi virš mano įvardyto
+    lauko?
+ 5. „Įrodykite, kad“ tipo uždaviniui versk mane įsitikinti, kad teiginys tikrai
+    TEISINGAS taip, kaip jį užrašiau — pačiam sukonstruoti antipavyzdį ir
+    pamatyti, kad jis nepavyksta.
+ 6. Versk mane parengti savo pilną pavyzdinį sprendimą ir laikyti jį privatų, kad
+    galėčiau pagal jį vertinti. Nerašyk jo už mane.
+ 7. Versk mane nurodyti, kuriomis paskaitomis sprendžiantysis gali remtis.
+    Uždavinys, kuriam reikia dar nepasiektos teoremos, nėra sąžiningas uždavinys.
 
-End goal: a clean unambiguous problem, a written statement of what may be
-assumed, and my own verified model solution that I keep back.</pre></div> <div class="prompt-actions"> <button class="btn" type="button" data-copy>Copy prompt</button> <button class="btn" type="button" data-expand>Show all</button> </div> </article><article class="prompt-card" data-prompt> <header> <h3>4 · Solve your partner&#39;s problem</h3> <p>The other half of the pair exercise. Then meet and compare — without AI.</p> </header> <div class="prompt-body"><pre data-prompt-text>Solver&#39;s Assistant (the peer receiving the problem)
+Galutinis tikslas: švarus nedviprasmiškas uždavinys, užrašytas teiginys, ką
+galima laikyti žinoma, ir mano paties patikrintas pavyzdinis sprendimas, kurį
+pasilieku sau.</pre></div> <div class="prompt-actions"> <button class="btn" type="button" data-copy>Kopijuoti nurodymą</button> <button class="btn" type="button" data-expand>Rodyti visą</button> </div> </article><article class="prompt-card" data-prompt> <header> <h3>4 · Išspręsti partnerio uždavinį</h3> <p>Antroji poros pratimo pusė. Paskui susitikite ir palyginkite — be dirbtinio intelekto.</p> </header> <div class="prompt-body"><pre data-prompt-text>Sprendžiančiojo asistentas (bendramokslis, gavęs uždavinį)
 
-A coursemate has set me a problem. You are my Socratic solving partner: help me
-reason toward a solution, but do not hand me one.
+Kurso draugas man davė uždavinį. Esi mano sokratiškasis sprendimo partneris:
+padėk man samprotauti link sprendimo, bet neduok man jo.
 
-The problem: [paste it]
-My current thinking: [where I am starting from, even if it is nowhere]
+Uždavinys: [įklijuok]
+Mano dabartinės mintys: [nuo ko pradedu, net jei nuo nieko]
 
-Rules for you:
+Taisyklės tau:
 
- 1. First ask me to restate the problem in my own words and say exactly what is
-    given and what is wanted. Check I have understood before we go on.
- 2. Ask ONE question at a time. Help me choose an approach by questioning, not
-    by proposing the method yourself.
- 3. Ask me which hypothesis I expect to be load-bearing before I start. That
-    guess is usually where the argument turns.
- 4. When I propose a method, make me justify why it should work BEFORE I grind
-    through it.
- 5. Make me predict the shape of the answer first, then check it afterwards —
-    substitute back, test the smallest case, check a trace or a determinant
-    against the eigenvalues, confirm dimensions add up, or verify the result
-    against an example I already know.
- 6. If I am stuck for two turns, give a hint that narrows the approach, not the
-    answer. Only answer directly if I say &quot;just tell me&quot;.
- 7. Once I have an answer, ask me why it is right, and where the argument would
-    break if a hypothesis were dropped.
+ 1. Pirmiausia paprašyk savais žodžiais perpasakoti uždavinį ir tiksliai
+    pasakyti, kas duota ir ko ieškoma. Įsitikink, kad supratau, prieš judant
+    toliau.
+ 2. Klausk PO VIENĄ klausimą. Padėk man pasirinkti metodą klausdamas, o ne pats
+    siūlydamas.
+ 3. Prieš pradedant klausk, kuri prielaida, mano manymu, bus laikančioji. Tas
+    spėjimas paprastai ir yra vieta, kur argumentas pasisuka.
+ 4. Kai pasiūlau metodą, versk pagrįsti, kodėl jis turėtų veikti, PRIEŠ man jį
+    prasukant.
+ 5. Versk mane pirma numatyti atsakymo pavidalą, o paskui jį patikrinti — įstatyti
+    atgal, patikrinti mažiausią atvejį, palyginti pėdsaką ar determinantą su
+    tikrinėmis reikšmėmis, įsitikinti, kad dimensijos sutampa, arba patikrinti
+    rezultatą pagal jau žinomą pavyzdį.
+ 6. Jei įstringu dviem ėjimams, duok užuominą, kuri siaurina metodą, o ne
+    atsakymą. Tiesiogiai atsakyk tik tada, jei pasakau „tiesiog pasakyk“.
+ 7. Kai turiu atsakymą, klausk, kodėl jis teisingas ir kur argumentas lūžtų,
+    atsisakius vienos prielaidos.
 
-Begin by asking me to restate the problem in my own words.</pre></div> <div class="prompt-actions"> <button class="btn" type="button" data-copy>Copy prompt</button> <button class="btn" type="button" data-expand>Show all</button> </div> </article><h2>Working in pairs</h2> <ol class="habits" style="counter-reset:none"> <li>Pair up. Each of you uses prompt 3 to author a problem, and works your own model solution — privately.</li><li>Swap. Hand over only the problem, not your solution.</li><li>Solve. Each of you works the other&#39;s problem using prompt 4.</li><li>Debrief without AI. Compare: did the solutions agree? Did the problem have a hole? Was the setter&#39;s own model answer actually right? This human step is the point of the exercise.</li> </ol> <div class="trap"> <h3>Two traps to avoid</h3> <p> <strong>The setter must verify their own model solution.</strong> Do not
-      trust an AI-generated answer key. If the "model" answer is wrong, it can
-      pass a wrong submission and nobody in the pair ever finds out.
-</p> <p> <strong>The solver must resist pasting the problem in and asking for the
-      answer.</strong> The skill being trained is reasoning and judgement, not
-      retrieval. The whole exercise depends on not doing this.
-</p> </div> <script type="module">document.querySelectorAll("[data-prompt]").forEach(t=>{const o=t.querySelector("[data-prompt-text]"),s=o.textContent??"";t.querySelector("[data-copy]").addEventListener("click",async n=>{const e=n.currentTarget;try{await navigator.clipboard.writeText(s),e.textContent="Copied ✓"}catch{const c=document.createRange();c.selectNodeContents(o);const a=window.getSelection();a?.removeAllRanges(),a?.addRange(c),e.textContent="Selected — press Ctrl+C"}window.setTimeout(()=>{e.textContent="Copy prompt"},2500)}),t.querySelector("[data-expand]").addEventListener("click",n=>{const e=n.currentTarget;t.classList.toggle("is-open"),e.textContent=t.classList.contains("is-open")?"Collapse":"Show all"})});</script>  </main> <footer class="site-footer"> <div class="wrap"> <p> Linear Algebra for Physicists — From Vector Spaces to Hilbert Spaces.
+Pradėk prašydamas manęs savais žodžiais perpasakoti uždavinį.</pre></div> <div class="prompt-actions"> <button class="btn" type="button" data-copy>Kopijuoti nurodymą</button> <button class="btn" type="button" data-expand>Rodyti visą</button> </div> </article><h2>Darbas poromis</h2> <ol class="habits" style="counter-reset:none"> <li>Susiporuokite. Kiekvienas 3 nurodymu sudaro uždavinį ir privačiai parengia savo pavyzdinį sprendimą.</li><li>Apsikeiskite. Perduokite tik uždavinį, ne sprendimą.</li><li>Spręskite. Kiekvienas 4 nurodymu sprendžia kito uždavinį.</li><li>Aptarkite be dirbtinio intelekto. Palyginkite: ar sprendimai sutapo? Ar uždavinyje buvo spraga? Ar sudarytojo pavyzdinis atsakymas iš tikrųjų buvo teisingas? Šis žmogiškasis žingsnis ir yra pratimo esmė.</li> </ol> <div class="trap"> <h3>Dvi klaidos, kurių verta vengti</h3> <p><strong>Sudarantysis privalo pats patikrinti savo pavyzdinį sprendimą.</strong> Nepasitikėkite dirbtinio intelekto sugeneruotu atsakymų raktu. Jei „pavyzdinis“ atsakymas klaidingas, jis gali praleisti klaidingą darbą, ir niekas poroje to nesužinos.</p><p><strong>Sprendžiantysis privalo atsispirti pagundai įklijuoti uždavinį ir paprašyti atsakymo.</strong> Lavinamas įgūdis yra samprotavimas ir nuovoka, o ne paieška. Visas pratimas remiasi tuo, kad to nedarysite.</p> </div> <script>(function(){const text = {"copy":"Kopijuoti nurodymą","copied":"Nukopijuota ✓","selected":"Pažymėta — spauskite Ctrl+C","showAll":"Rodyti visą","collapse":"Suskleisti"};
 
-Worked solutions are done in the tutorials and are not published here.
-</p> </div> </footer> <script>
+    document.querySelectorAll("[data-prompt]").forEach(function (card) {
+      var source = card.querySelector("[data-prompt-text]");
+      var body = source.textContent || "";
+
+      card.querySelector("[data-copy]").addEventListener("click", function (event) {
+        var button = event.currentTarget;
+        Promise.resolve()
+          .then(function () { return navigator.clipboard.writeText(body); })
+          .then(function () { button.textContent = text.copied; })
+          .catch(function () {
+            // Clipboard access can be refused; select the text so it can be
+            // copied by hand instead of the button silently doing nothing.
+            var range = document.createRange();
+            range.selectNodeContents(source);
+            var selection = window.getSelection();
+            selection?.removeAllRanges();
+            selection?.addRange(range);
+            button.textContent = text.selected;
+          })
+          .then(function () {
+            window.setTimeout(function () { button.textContent = text.copy; }, 2500);
+          });
+      });
+
+      card.querySelector("[data-expand]").addEventListener("click", function (event) {
+        var button = event.currentTarget;
+        card.classList.toggle("is-open");
+        button.textContent = card.classList.contains("is-open")
+          ? text.collapse : text.showAll;
+      });
+    });
+  })();</script>  </main> <footer class="site-footer"> <div class="wrap"> <p> Tiesinė algebra fizikams — Nuo tiesinių erdvių iki Hilberto erdvių.
+  Pilni sprendimai nagrinėjami pratybose ir čia neskelbiami. </p> </div> </footer> <script>
       document.querySelector("[data-theme-toggle]")?.addEventListener("click", function () {
         var root = document.documentElement;
         var current = root.getAttribute("data-theme");

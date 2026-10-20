@@ -1,12 +1,15 @@
 <!DOCTYPE html><html lang="en" data-refpop="{&#34;open&#34;:&#34;Open in the notes →&#34;,&#34;goto&#34;:&#34;Go there →&#34;,&#34;loading&#34;:&#34;Loading…&#34;,&#34;failed&#34;:&#34;Could not load this reference.&#34;}"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Search · Linear Algebra for Physicists</title><meta name="description" content="Search the notes, the worked examples and every problem."><link rel="icon" href="/linalg/favicon.svg"><link rel="alternate" hreflang="lt" href="/linalg/search"><link rel="alternate" hreflang="en" href="/linalg/en/search"><script>
       // Applied before first paint, so the page never flashes the wrong theme.
+      // The `js` class lets the phone menu fold away only when the script
+      // that unfolds it will run; without it the bar scrolls as before.
       (function () {
+        document.documentElement.classList.add("js");
         try {
           var t = localStorage.getItem("linalg-theme");
           if (t) document.documentElement.setAttribute("data-theme", t);
         } catch (e) {}
       })();
-    </script><link rel="stylesheet" href="/linalg/_astro/about.DJLTv5vH.css">
+    </script><link rel="stylesheet" href="/linalg/_astro/about.DzzqT_TZ.css">
 <style>:root{--pagefind-ui-primary: var(--accent);--pagefind-ui-text: var(--text);--pagefind-ui-background: var(--bg);--pagefind-ui-border: var(--rule);--pagefind-ui-tag: var(--bg-sunken);--pagefind-ui-border-radius: 8px;--pagefind-ui-font: var(--font-ui)}
 </style></head> <body>   <div class="board" aria-hidden="true"><div class="board-ink"></div></div> <script>
       // Fade the board out over the first 60% of a screen of scrolling.
@@ -22,7 +25,10 @@
         }, { passive: true });
         update();
       })();
-    </script> <header class="site-header"> <div class="wrap bar"> <a class="brand" href="/linalg/en/"> Linear Algebra <span>· for Physicists</span> </a> <nav class="site-nav"> <a href="/linalg/en/"> Lectures </a><a href="/linalg/en/problems"> Problems </a><a href="/linalg/en/ai"> Study with AI </a><a href="/linalg/en/reading"> Reading </a><a href="/linalg/en/about"> About </a><a href="/linalg/en/search" aria-current="page"> Search </a> <div class="lang-switch" role="group" aria-label="Language"> <a href="/linalg/search" hreflang="lt" lang="lt"> LT <span class="lang-full">Lietuvių</span> </a><a href="/linalg/en/search" hreflang="en" lang="en" aria-current="true"> EN <span class="lang-full">English</span> </a> </div> <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch between light and dark theme"> <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"> <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path> </svg> </button> </nav> </div> </header> <main class="wrap" data-pagefind-body>  <header class="page-head"> <h1>Search</h1> <p class="lede">Search the notes, the worked examples and every problem.</p> </header> <div id="search" data-pagefind-ignore></div> <link rel="stylesheet" href="/linalg/_pagefind/pagefind-ui.css"> <script>(function(){const bundlePath = "/linalg/_pagefind/";
+    </script> <header class="site-header"> <div class="wrap bar"> <a class="brand" href="/linalg/en/"> Linear Algebra <span>· for Physicists</span> </a> <!-- Below 48rem the nav is a panel behind this button. It scrolled
+             sideways inside the bar before, which left Reading, About,
+             Search, the language switch and the theme toggle off screen with
+             nothing to say they were there. --> <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-nav"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"> <path d="M4 7h16M4 12h16M4 17h16"></path> </svg> Menu </button> <nav class="site-nav" id="site-nav"> <a href="/linalg/en/"> Lectures </a><a href="/linalg/en/problems"> Problems </a><a href="/linalg/en/ai"> Study with AI </a><a href="/linalg/en/reading"> Reading </a><a href="/linalg/en/about"> About </a><a href="/linalg/en/search" aria-current="page"> Search </a> <div class="nav-tools"> <div class="lang-switch" role="group" aria-label="Language"> <a href="/linalg/search" hreflang="lt" lang="lt"> LT <span class="lang-full">Lietuvių</span> </a><a href="/linalg/en/search" hreflang="en" lang="en" aria-current="true"> EN <span class="lang-full">English</span> </a> </div> <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch between light and dark theme"> <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"> <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path> </svg> </button> </div> </nav> </div> </header> <main class="wrap" data-pagefind-body>  <header class="page-head"> <h1>Search</h1> <p class="lede">Search the notes, the worked examples and every problem.</p> </header> <div id="search" data-pagefind-ignore></div> <link rel="stylesheet" href="/linalg/_pagefind/pagefind-ui.css"> <script>(function(){const bundlePath = "/linalg/_pagefind/";
 const translations = {};
 
     window.addEventListener("DOMContentLoaded", function () {
@@ -49,4 +55,27 @@ const translations = {};
         root.setAttribute("data-theme", next);
         try { localStorage.setItem("linalg-theme", next); } catch (e) {}
       });
-    </script>  <script type="module" src="/linalg/_astro/Base.astro_astro_type_script_index_0_lang.CY6_DM2n.js"></script> </body> </html>
+
+      // The phone menu: open from the button, close on Escape or a tap outside.
+      (function () {
+        var header = document.querySelector(".site-header");
+        var button = document.querySelector("[data-nav-toggle]");
+        if (!header || !button) return;
+        function set(open) {
+          header.classList.toggle("nav-open", open);
+          button.setAttribute("aria-expanded", String(open));
+        }
+        button.addEventListener("click", function () {
+          set(!header.classList.contains("nav-open"));
+        });
+        document.addEventListener("keydown", function (event) {
+          if (event.key === "Escape" && header.classList.contains("nav-open")) {
+            set(false);
+            button.focus();
+          }
+        });
+        document.addEventListener("click", function (event) {
+          if (!header.contains(event.target)) set(false);
+        });
+      })();
+    </script>  <script type="module" src="/linalg/_astro/Base.astro_astro_type_script_index_0_lang.BEsbKaj1.js"></script> </body> </html>

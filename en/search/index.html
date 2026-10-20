@@ -2,6 +2,22 @@
       // Applied before first paint, so the page never flashes the wrong theme.
       // The `js` class lets the phone menu fold away only when the script
       // that unfolds it will run; without it the bar scrolls as before.
+      // `linalgActivity()` notes today in this browser's activity record; the
+      // self-check, the problem marks, the goals and the laboratories call it
+      // when the reader does something, and My progress draws the week from it.
+      window.linalgActivity = function () {
+        try {
+          var key = "linalg-activity", now = new Date();
+          var day = now.getFullYear() + "-" + String(now.getMonth() + 1).padStart(2, "0")
+            + "-" + String(now.getDate()).padStart(2, "0");
+          var log = JSON.parse(localStorage.getItem(key) || "{}") || {};
+          log[day] = (log[day] || 0) + 1;
+          // Ninety days is plenty for a week view and keeps the record small.
+          var cutoff = new Date(now.getTime() - 90 * 864e5).toISOString().slice(0, 10);
+          Object.keys(log).forEach(function (d) { if (d < cutoff) delete log[d]; });
+          localStorage.setItem(key, JSON.stringify(log));
+        } catch (e) {}
+      };
       (function () {
         document.documentElement.classList.add("js");
         try {
@@ -9,7 +25,7 @@
           if (t) document.documentElement.setAttribute("data-theme", t);
         } catch (e) {}
       })();
-    </script><link rel="stylesheet" href="/linalg/_astro/about.DzzqT_TZ.css">
+    </script><link rel="stylesheet" href="/linalg/_astro/about.CJ8xZ4Yc.css">
 <style>:root{--pagefind-ui-primary: var(--accent);--pagefind-ui-text: var(--text);--pagefind-ui-background: var(--bg);--pagefind-ui-border: var(--rule);--pagefind-ui-tag: var(--bg-sunken);--pagefind-ui-border-radius: 8px;--pagefind-ui-font: var(--font-ui)}
 </style></head> <body>   <div class="board" aria-hidden="true"><div class="board-ink"></div></div> <script>
       // Fade the board out over the first 60% of a screen of scrolling.
@@ -28,7 +44,9 @@
     </script> <header class="site-header"> <div class="wrap bar"> <a class="brand" href="/linalg/en/"> Linear Algebra <span>· for Physicists</span> </a> <!-- Below 48rem the nav is a panel behind this button. It scrolled
              sideways inside the bar before, which left Reading, About,
              Search, the language switch and the theme toggle off screen with
-             nothing to say they were there. --> <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-nav"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"> <path d="M4 7h16M4 12h16M4 17h16"></path> </svg> Menu </button> <nav class="site-nav" id="site-nav"> <a href="/linalg/en/"> Lectures </a><a href="/linalg/en/problems"> Problems </a><a href="/linalg/en/ai"> Study with AI </a><a href="/linalg/en/reading"> Reading </a><a href="/linalg/en/about"> About </a><a href="/linalg/en/search" aria-current="page"> Search </a> <div class="nav-tools"> <div class="lang-switch" role="group" aria-label="Language"> <a href="/linalg/search" hreflang="lt" lang="lt"> LT <span class="lang-full">Lietuvių</span> </a><a href="/linalg/en/search" hreflang="en" lang="en" aria-current="true"> EN <span class="lang-full">English</span> </a> </div> <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch between light and dark theme"> <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"> <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path> </svg> </button> </div> </nav> </div> </header> <main class="wrap" data-pagefind-body>  <header class="page-head"> <h1>Search</h1> <p class="lede">Search the notes, the worked examples and every problem.</p> </header> <div id="search" data-pagefind-ignore></div> <link rel="stylesheet" href="/linalg/_pagefind/pagefind-ui.css"> <script>(function(){const bundlePath = "/linalg/_pagefind/";
+             nothing to say they were there. --> <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-nav"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"> <path d="M4 7h16M4 12h16M4 17h16"></path> </svg> Menu </button> <nav class="site-nav" id="site-nav"> <a href="/linalg/en/"> Lectures </a><a href="/linalg/en/problems"> Problems </a><a href="/linalg/en/ai"> Study with AI </a><a href="/linalg/en/reading"> Reading </a><a href="/linalg/en/about"> About </a><a href="/linalg/en/search" aria-current="page"> Search </a> <div class="nav-tools"> <!-- My progress: an icon beside the theme toggle on a wide header,
+               where a seventh text link would not fit; named in full in the
+               narrow-header panel. --> <a class="nav-me" href="/linalg/en/progress" title="My progress"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"> <path d="M3 3v18h18"></path><path d="m7 15 4-4 3 3 5-6"></path> </svg> <span class="nav-me-label">My progress</span> </a> <div class="lang-switch" role="group" aria-label="Language"> <a href="/linalg/search" hreflang="lt" lang="lt"> LT <span class="lang-full">Lietuvių</span> </a><a href="/linalg/en/search" hreflang="en" lang="en" aria-current="true"> EN <span class="lang-full">English</span> </a> </div> <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch between light and dark theme"> <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"> <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path> </svg> </button> </div> </nav> </div> </header> <main class="wrap" data-pagefind-body>  <header class="page-head"> <h1>Search</h1> <p class="lede">Search the notes, the worked examples and every problem.</p> </header> <div id="search" data-pagefind-ignore></div> <link rel="stylesheet" href="/linalg/_pagefind/pagefind-ui.css"> <script>(function(){const bundlePath = "/linalg/_pagefind/";
 const translations = {};
 
     window.addEventListener("DOMContentLoaded", function () {

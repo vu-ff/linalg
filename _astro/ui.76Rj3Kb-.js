@@ -1,1 +1,0 @@
-const s=(t,n)=>t.replace(/\{(\w+)\}/g,(e,r)=>r in n?String(n[r]):e),o={en:t=>Math.abs(t)===1?"one":"other",lt:t=>{const n=Math.abs(t)%10,e=Math.abs(t)%100;return n===1&&e!==11?"one":n>=2&&n<=9&&!(e>=11&&e<=19)?"few":"other"}},a=(t,n,e)=>{const r=(o[t]??o.en)(n);return e[r]??e.other};export{s as f,a as p};

@@ -1,104 +1,50 @@
-<!DOCTYPE html><html lang="en" data-refpop="{&#34;open&#34;:&#34;Open in the notes →&#34;,&#34;goto&#34;:&#34;Go there →&#34;,&#34;loading&#34;:&#34;Loading…&#34;,&#34;failed&#34;:&#34;Could not load this reference.&#34;}"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Search · Linear Algebra for Physicists</title><meta name="description" content="Search the notes, the worked examples and every problem."><link rel="icon" href="/linalg/favicon.svg"><link rel="alternate" hreflang="lt" href="/linalg/search"><link rel="alternate" hreflang="en" href="/linalg/en/search"><script>
-      // Applied before first paint, so the page never flashes the wrong theme.
-      // The `js` class lets the phone menu fold away only when the script
-      // that unfolds it will run; without it the bar scrolls as before.
-      // `linalgActivity()` notes today in this browser's activity record; the
-      // self-check, the problem marks, the goals and the laboratories call it
-      // when the reader does something, and My progress draws the week from it.
-      window.linalgActivity = function () {
-        try {
-          var key = "linalg-activity", now = new Date();
-          var day = now.getFullYear() + "-" + String(now.getMonth() + 1).padStart(2, "0")
-            + "-" + String(now.getDate()).padStart(2, "0");
-          var log = JSON.parse(localStorage.getItem(key) || "{}") || {};
-          log[day] = (log[day] || 0) + 1;
-          // Ninety days is plenty for a week view and keeps the record small.
-          var cutoff = new Date(now.getTime() - 90 * 864e5).toISOString().slice(0, 10);
-          Object.keys(log).forEach(function (d) { if (d < cutoff) delete log[d]; });
-          localStorage.setItem(key, JSON.stringify(log));
-        } catch (e) {}
-      };
-      // "Forget me" on My progress (scripts/greeting.ts) signals every other
-      // open tab to reload, so none writes back the records it holds in memory.
-      window.addEventListener("storage", function (event) {
-        if (event.key === "linalg-forget" && event.newValue) location.reload();
-      });
-      (function () {
-        document.documentElement.classList.add("js");
-        try {
-          var t = localStorage.getItem("linalg-theme");
-          if (t) document.documentElement.setAttribute("data-theme", t);
-        } catch (e) {}
-      })();
-    </script><link rel="stylesheet" href="/linalg/_astro/about.BASbeqBo.css">
-<style>:root{--pagefind-ui-primary: var(--accent);--pagefind-ui-text: var(--text);--pagefind-ui-background: var(--bg);--pagefind-ui-border: var(--rule);--pagefind-ui-tag: var(--bg-sunken);--pagefind-ui-border-radius: 8px;--pagefind-ui-font: var(--font-ui)}
-</style></head> <body>   <div class="board" aria-hidden="true"><div class="board-ink"></div></div> <script>
-      // Fade the board out over the first 60% of a screen of scrolling.
-      (function () {
-        var board = document.querySelector(".board"), frame = 0;
-        if (!board) return;
-        function update() {
-          frame = 0;
-          board.style.opacity = String(Math.max(0, 1 - window.scrollY / (window.innerHeight * 0.6)));
-        }
-        window.addEventListener("scroll", function () {
-          if (!frame) frame = requestAnimationFrame(update);
-        }, { passive: true });
-        update();
-      })();
-    </script> <header class="site-header"> <div class="wrap bar"> <a class="brand" href="/linalg/en/"> Linear Algebra <span>· for Physicists</span> </a> <!-- Below 48rem the nav is a panel behind this button. It scrolled
-             sideways inside the bar before, which left Reading, About,
-             Search, the language switch and the theme toggle off screen with
-             nothing to say they were there. --> <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-nav"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"> <path d="M4 7h16M4 12h16M4 17h16"></path> </svg> Menu </button> <nav class="site-nav" id="site-nav"> <a href="/linalg/en/"> Lectures </a><a href="/linalg/en/problems"> Problems </a><a href="/linalg/en/ai"> Study with AI </a><a href="/linalg/en/reading"> Reading </a><a href="/linalg/en/about"> About </a><a href="/linalg/en/search" aria-current="page"> Search </a> <div class="nav-tools"> <!-- My progress: an icon beside the theme toggle on a wide header,
-               where a seventh text link would not fit; named in full in the
-               narrow-header panel. --> <a class="nav-me" href="/linalg/en/progress" title="My progress"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"> <path d="M3 3v18h18"></path><path d="m7 15 4-4 3 3 5-6"></path> </svg> <span class="nav-me-label">My progress</span> </a> <div class="lang-switch" role="group" aria-label="Language"> <a href="/linalg/search" hreflang="lt" lang="lt"> LT <span class="lang-full">Lietuvių</span> </a><a href="/linalg/en/search" hreflang="en" lang="en" aria-current="true"> EN <span class="lang-full">English</span> </a> </div> <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch between light and dark theme"> <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"> <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path> </svg> </button> </div> </nav> </div> </header> <main class="wrap" data-pagefind-body>  <header class="page-head"> <h1>Search</h1> <p class="lede">Search the notes, the worked examples and every problem.</p> </header> <div id="search" data-pagefind-ignore></div> <link rel="stylesheet" href="/linalg/_pagefind/pagefind-ui.css"> <script>(function(){const bundlePath = "/linalg/_pagefind/";
-const translations = {};
-
-    window.addEventListener("DOMContentLoaded", function () {
-      var script = document.createElement("script");
-      script.src = bundlePath + "pagefind-ui.js";
-      script.onload = function () {
-        new window.PagefindUI({
-          element: "#search", bundlePath: bundlePath,
-          showSubResults: true, showImages: false,
-          translations: translations,
-        });
-      };
-      document.head.appendChild(script);
-    });
-  })();</script>   </main> <footer class="site-footer"> <div class="wrap"> <p> Linear Algebra for Physicists — From Vector Spaces to Hilbert Spaces.
-  Worked solutions are done in the tutorials and are not published here. </p> </div> </footer> <script>
-      document.querySelector("[data-theme-toggle]")?.addEventListener("click", function () {
-        var root = document.documentElement;
-        var current = root.getAttribute("data-theme");
-        if (!current) {
-          current = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
-        }
-        var next = current === "dark" ? "light" : "dark";
-        root.setAttribute("data-theme", next);
-        try { localStorage.setItem("linalg-theme", next); } catch (e) {}
-      });
-
-      // The phone menu: open from the button, close on Escape or a tap outside.
-      (function () {
-        var header = document.querySelector(".site-header");
-        var button = document.querySelector("[data-nav-toggle]");
-        if (!header || !button) return;
-        function set(open) {
-          header.classList.toggle("nav-open", open);
-          button.setAttribute("aria-expanded", String(open));
-        }
-        button.addEventListener("click", function () {
-          set(!header.classList.contains("nav-open"));
-        });
-        document.addEventListener("keydown", function (event) {
-          if (event.key === "Escape" && header.classList.contains("nav-open")) {
-            set(false);
-            button.focus();
-          }
-        });
-        document.addEventListener("click", function (event) {
-          if (!header.contains(event.target)) set(false);
-        });
-      })();
-    </script>  <script type="module" src="/linalg/_astro/Base.astro_astro_type_script_index_0_lang.BEsbKaj1.js"></script> </body> </html>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<meta name="referrer" content="origin">
+<title>Tiesinė algebra fizikams · Linear Algebra for Physicists</title>
+<link rel="canonical" href="https://matfiz.atvira-mokykla.lt/algebra/en/search/">
+<noscript><meta http-equiv="refresh" content="0; url=https://matfiz.atvira-mokykla.lt/algebra/en/search/"></noscript>
+<script>(async function () {
+  var to = "https://matfiz.atvira-mokykla.lt/algebra/en/search/";
+  var anchor = location.hash.slice(1);
+  function go(code) {
+    location.replace(to + location.search + (code ? "#move=" + code + (anchor ? ";" + anchor : "") : (anchor ? "#" + anchor : "")));
+  }
+  function b64(bytes) {
+    var s = "", chunk = 0x8000;
+    for (var i = 0; i < bytes.length; i += chunk) s += String.fromCharCode.apply(null, bytes.subarray(i, i + chunk));
+    return btoa(s).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "");
+  }
+  try {
+    var keys = new RegExp("^linalg-(progress$|activity$|selfcheck-[a-z]{2}-\\d+$|problems-[a-z]{2}$|lab-[a-z]{2}-|review-[a-z]{2}$|drills-[a-z]{2}$|level-[a-z]{2}$|name$|name-address$)"), data = {}, any = false;
+    for (var i = 0; i < localStorage.length; i++) {
+      var key = localStorage.key(i);
+      if (!key || !keys.test(key)) continue;
+      var raw = localStorage.getItem(key);
+      if (/^linalg-level-/.test(key)) data[key] = raw;
+      else { try { data[key] = JSON.parse(raw); } catch (e) { continue; } }
+      any = true;
+    }
+    if (!any) return go("");
+    var json = JSON.stringify(data), code;
+    if (window.CompressionStream) {
+      var stream = new Blob([json]).stream().pipeThrough(new CompressionStream("deflate-raw"));
+      code = "z" + b64(new Uint8Array(await new Response(stream).arrayBuffer()));
+    } else {
+      code = "j" + b64(new TextEncoder().encode(json));
+    }
+    // Too long for a link (very rare): go without; the progress code still works by hand.
+    go(code.length > 1500000 ? "" : code);
+  } catch (e) { go(""); }
+})();</script>
+<style>body{font:16px/1.5 system-ui,sans-serif;max-width:36rem;margin:3rem auto;padding:0 1rem;color:#211a1e}a{color:#78003f}</style>
+</head>
+<body>
+<p>Kursas persikėlė: <a href="https://matfiz.atvira-mokykla.lt/algebra/en/search/">matfiz.atvira-mokykla.lt/algebra/en/search/</a></p>
+<p lang="en">The course has moved: <a href="https://matfiz.atvira-mokykla.lt/algebra/en/search/">matfiz.atvira-mokykla.lt/algebra/en/search/</a></p>
+</body>
+</html>
